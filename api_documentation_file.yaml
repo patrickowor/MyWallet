@@ -1,0 +1,385 @@
+type: collection.insomnia.rest/5.0
+name: MyWallet
+meta:
+  id: wrk_05c98de634d64c05a386094063922ccb
+  created: 1754593411060
+  modified: 1754593411060
+  description: ""
+collection:
+  - name: MyWallet
+    meta:
+      id: fld_869aa1f6405d4edda3b353feeccf3dd3
+      created: 1754593427877
+      modified: 1754744780369
+      sortKey: -1754593427877
+      description: ""
+    children:
+      - name: Calls
+        meta:
+          id: fld_379868e0e73d4bb5b68bd182a4078867
+          created: 1754744744696
+          modified: 1754744744696
+          sortKey: -1754744744696
+          description: ""
+        children:
+          - url: "{{ _.base_url }}/call/history/"
+            name: call history
+            meta:
+              id: req_fc6c9e874f3a4b29b2394bfc5e70fed8
+              created: 1754738990161
+              modified: 1754744749769
+              isPrivate: false
+              description: ""
+              sortKey: -1754744749715
+            method: GET
+            parameters:
+              - id: pair_899ea0f2a8e14dad84c67cc06edd4e6b
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/call/start/"
+            name: start call
+            meta:
+              id: req_5a9ba1c90ccd44b0a9730310ced47206
+              created: 1754744660844
+              modified: 1754744893761
+              isPrivate: false
+              description: ""
+              sortKey: -1754744749815
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"phone_number": "+2348064422959"
+                }
+            parameters:
+              - id: pair_0cbaa2f9ef944c1a93079d4dac0386d5
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/call/end/"
+            name: end call
+            meta:
+              id: req_ad0909eeeefc4bd4a70cbcaf3b83eb9b
+              created: 1754744731706
+              modified: 1754744880222
+              isPrivate: false
+              description: ""
+              sortKey: -1754744749915
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"phone_number": "+2348064422959"
+                }
+            parameters:
+              - id: pair_899ea0f2a8e14dad84c67cc06edd4e6b
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Wallet
+        meta:
+          id: fld_4889587d2f124237b6fa5fcef83c382a
+          created: 1754744775978
+          modified: 1754744786855
+          sortKey: -1754679153231.25
+          description: ""
+        children:
+          - url: "{{ _.base_url }}/wallet/create"
+            name: create wallet (otp)
+            meta:
+              id: req_72137282bfec49e6bb8ac4afa270728b
+              created: 1754659200815
+              modified: 1754744792430
+              isPrivate: false
+              description: ""
+              sortKey: -1754744790217
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"otp": "123456"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/wallet/create"
+            name: create wallet
+            meta:
+              id: req_9defa334db7647158a89ca3a95eba44a
+              created: 1754659207388
+              modified: 1754745176384
+              isPrivate: false
+              description: ""
+              sortKey: -1754744790317
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"gender": "male",
+                	"users_title": "Mr",
+                	"address": "no 20 ikeja road lagos",
+                	"city": "lagos",
+                	"state": "lagos"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/wallet/balance"
+            name: get wallet balance
+            meta:
+              id: req_194703bc62134947a459843c8eef2594
+              created: 1754738874599
+              modified: 1754744790171
+              isPrivate: false
+              description: ""
+              sortKey: -1754744790117
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Auth
+        meta:
+          id: fld_c53e76e64aef457d9b37112d526e7a6a
+          created: 1754744812959
+          modified: 1754744817189
+          sortKey: -1754618095461.875
+          description: ""
+        children:
+          - url: "{{base_url}}/signup"
+            name: Signup
+            meta:
+              id: req_30a8ce4044f74f13b792822f903ed7bf
+              created: 1754593432249
+              modified: 1754744825269
+              isPrivate: false
+              description: ""
+              sortKey: -1754744820299
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "email": "string@string.com",
+                  "password": "string",
+                  "confirm_password": "string",
+                  "name": "tester tee",
+                  "phone_number": "+2347064422922"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{base_url}}/login"
+            name: Login
+            meta:
+              id: req_1827ba70d8be412ab477d606b69f7c64
+              created: 1754655057134
+              modified: 1754749714173
+              isPrivate: false
+              description: ""
+              sortKey: -1754744820199
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "email": "string@string.com",
+                  "password": "string"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/profile"
+            name: profile
+            meta:
+              id: req_edfd3f80ec5d434487735c994fda271b
+              created: 1754659209848
+              modified: 1754744830940
+              isPrivate: false
+              description: ""
+              sortKey: -1754744820349
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.base_url }}/profile"
+            name: update profile
+            meta:
+              id: req_b8de551bfc554f4fb424abdadf4e901c
+              created: 1754660100587
+              modified: 1754744827894
+              isPrivate: false
+              description: ""
+              sortKey: -1754744820399
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "email": "string@string.com",
+                	"avatar": "string",
+                  "name": "tester teenison",
+                  "phone_number": "+2347064422955"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - url: "{{ _.base_url }}/chat/history/:phone_number/"
+        name: chat history
+        meta:
+          id: req_03ad8987e9b24b588bd38a8e0953aeff
+          created: 1754744594466
+          modified: 1754744850361
+          isPrivate: false
+          description: ""
+          sortKey: -1754744744796
+        method: GET
+        parameters:
+          - id: pair_899ea0f2a8e14dad84c67cc06edd4e6b
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: phone_number
+            value: "+2348064422959"
+    authentication:
+      type: bearer
+      token: "{{ _.auth_token }}"
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5fd1755f4d9bcd9ed93ff4dbe0933858e9c04145
+    created: 1754593411080
+    modified: 1754593411080
+environments:
+  name: Base Environment
+  meta:
+    id: env_5fd1755f4d9bcd9ed93ff4dbe0933858e9c04145
+    created: 1754593411074
+    modified: 1754747399480
+    isPrivate: false
+  data:
+    base_url: http://127.0.0.1:3000/api
+    auth_token: 028b1f19f8de71924bb21139075d91313cf6e2754d382fdf117a751c4dddc0e9a99331fc7ff35e5ce792dc78a9602969e93bf631fb7df5cfa0ae05428577f2e84ed539990762504a263f6e58a002853b346b11a8deaedb7f1061b924938ab1c536c6546812946ffa8bdedb1cafc2abbc8df341d791eda06b084aa89917abcb9cae5fb9172a0289c063243e42963af4f70da20f685d990026edf142b20a754948db89ef9943db6bb407e8bf2b48ab3d10

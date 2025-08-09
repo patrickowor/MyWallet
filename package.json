@@ -1,0 +1,42 @@
+{
+  "name": "mini-express-project",
+  "version": "1.0.0",
+  "description": "A simple Express.js application integrated with Socket.io and MongoDB and socket.io",
+  "main": "src/server.ts",
+  "scripts": {
+    "test-socket": " node ./test/test.socket.js",
+    "start": "ts-node -r tsconfig-paths/register --transpile-only src/app.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev -r tsconfig-paths/register  --respawn --transpile-only src/app.ts"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "bcrypt": "^6.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.1",
+    "reflect-metadata": "^0.2.2",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^4.17.8",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/mongoose": "^5.10.0",
+    "@types/morgan": "^1.9.10",
+    "@types/socket.io": "^2.1.10",
+    "socket.io-client": "^4.8.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
