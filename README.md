@@ -79,6 +79,7 @@ To test real-time messaging via Socket.io:
 
 ## Assumptions Made
 
+- mongodb and Nodejs version 22 must be already installed
 - Users are uniquely identified by email and phone number.
 - JWT tokens are encrypted using AES before being sent to clients.
 - Wallet creation and OTP validation are mocked unless live OnePipe credentials are provided.
