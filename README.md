@@ -6,8 +6,8 @@ This project is a real-time web application built with Express.js, Socket.io, Mo
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
-   cd mini-express-project
+   git clone [<repository-url>](https://github.com/patrickowor/MyWallet.git)
+   cd MyWallet
    ```
 
 2. **Install dependencies:**
