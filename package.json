@@ -1,5 +1,5 @@
 {
-  "name": "mini-express-project",
+  "name": "MyWallet",
   "version": "1.0.0",
   "description": "A simple Express.js application integrated with Socket.io and MongoDB and socket.io",
   "main": "src/server.ts",
